@@ -33,5 +33,14 @@ function filter(input) {
   //\d в регулярном выражении означает любую цифру.
   //g является флагом глобального поиска, что означает, что замена будет для всех совпадений в строке, а не только для первого.
   //выражение / \d / g находит все цифры в строке и заменяет их на пустую строку
-  return input.replace(/\d/g, "");
+//   return input.replace(/\d/g, "");
+    let tmp="";
+    for (let i=0; i<input.length; i++)
+    {
+        if(isNaN(parseInt([input[i]]))){
+            tmp+=input[i];
+        }
+    }
+    return tmp;
 }
+
